@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ui.doctorScreens.fragments.homeFragments.AddTopic">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <View
+                    android:layout_width="64dp"
+                    android:layout_height="3dp"
+                    android:background="@color/main"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="12dp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:background="@color/main"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_marginTop="4dp"
+                    />
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginHorizontal="16dp"
+                        android:background="@drawable/bottom_sheet_back">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/topicTitleC"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="16dp"
+                            android:hint="عنوان الموضوع"
+                            android:textColorHint="#615E5E"
+                            app:boxBackgroundColor="@color/main_transparent"
+                            app:boxBackgroundMode="outline"
+                            app:boxCornerRadiusBottomEnd="8dp"
+                            app:boxCornerRadiusBottomStart="8dp"
+                            app:boxCornerRadiusTopEnd="8dp"
+                            app:boxCornerRadiusTopStart="8dp"
+                            app:boxStrokeColor="@color/main"
+                            app:boxStrokeWidth="1.2dp"
+                            style="@style/LoginTextInputLayoutStyle"
+                            app:boxStrokeWidthFocused="2dp"
+                            app:hintTextColor="@color/black"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/topicTitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sub"
+                                android:gravity="start"
+                                android:textColor="@color/black"
+                                android:padding="10dp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/topicC"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="16dp"
+                            android:hint="الموضوع"
+                            android:textColorHint="#615E5E"
+                            app:boxBackgroundColor="@color/main_transparent"
+                            app:boxBackgroundMode="outline"
+                            app:boxCornerRadiusBottomEnd="8dp"
+                            app:boxCornerRadiusBottomStart="8dp"
+                            app:boxCornerRadiusTopEnd="8dp"
+                            app:boxCornerRadiusTopStart="8dp"
+                            app:boxStrokeColor="@color/main"
+                            app:boxStrokeWidth="1.2dp"
+                            style="@style/LoginTextInputLayoutStyle"
+                            app:boxStrokeWidthFocused="2dp"
+                            app:hintTextColor="@color/black"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/topic"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sub"
+                                android:textColor="@color/black"
+                                android:gravity="start"
+                                android:maxLines="5"
+                                android:ellipsize="end"
+                                android:padding="10dp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/addImage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:text="اضافة صورة"
+                            android:layout_gravity="end"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/sub"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:background="@drawable/base_button"
+                            android:layout_marginEnd="16dp" />
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/addFile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:text="اضافة ملف"
+                            android:layout_gravity="end"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/sub"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:background="@drawable/base_button"
+                            android:layout_marginEnd="16dp"
+                            />
+
+                        <androidx.constraintlayout.motion.widget.MotionLayout
+                            android:id="@+id/motion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginHorizontal="16dp"
+                            android:layout_marginTop="28dp"
+                            android:layout_marginBottom="24dp"
+                            app:layoutDescription="@xml/add_topic_xml_constraintlayout2_scene2">
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/saveTopic"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:alpha="1"
+                                android:background="@drawable/corner_button"
+                                android:fontFamily="@font/sub"
+                                android:text="حفظ الموضوع"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <com.google.android.material.progressindicator.CircularProgressIndicator
+                                android:id="@+id/myProgress"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:alpha="0"
+                                android:indeterminate="true"
+                                android:progressTint="@color/main"
+                                android:theme="@style/Theme.menu"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.motion.widget.MotionLayout>
+
+                        <ImageView
+                            android:layout_width="0.1dp"
+                            android:layout_height="0.1dp"
+                            android:id="@+id/uploadedImage"
+                            />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+        </ScrollView>
+
+</LinearLayout>

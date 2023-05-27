@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/patient_nav"
+    app:startDestination="@id/patientHome">
+
+    <fragment
+        android:id="@+id/patientChats"
+        android:name="com.example.palliativecare.ui.patientScreens.fragments.PatientChats"
+        android:label="patient_chats"
+        tools:layout="@layout/patient_chats" />
+    <fragment
+        android:id="@+id/patientHome"
+        android:name="com.example.palliativecare.ui.patientScreens.fragments.PatientHome"
+        android:label="patient_home"
+        tools:layout="@layout/patient_home" />
+    <fragment
+        android:id="@+id/patientSettings"
+        android:name="com.example.palliativecare.ui.patientScreens.fragments.PatientSettings"
+        android:label="patient_settings"
+        tools:layout="@layout/patient_settings" />
+</navigation>

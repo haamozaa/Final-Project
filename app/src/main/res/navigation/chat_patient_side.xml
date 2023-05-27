@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chat_patient_side"
+    app:startDestination="@id/chatPagePatientSide">
+
+    <fragment
+        android:id="@+id/chatPagePatientSide"
+        android:name="com.example.palliativecare.ui.patientScreens.fragments.patientChatPages.fragments.ChatPagePatientSide"
+        android:label="chat_page_patient_side"
+        tools:layout="@layout/chat_page_patient_side" >
+        <action
+            android:id="@+id/action_chatPagePatientSide_to_doctorProfilePatientSide"
+            app:destination="@id/doctorProfilePatientSide" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorProfilePatientSide"
+        android:name="com.example.palliativecare.ui.patientScreens.fragments.patientChatPages.fragments.DoctorProfilePatientSide"
+        android:label="doctor_profile_patient_side"
+        tools:layout="@layout/doctor_profile_patient_side" >
+        <action
+            android:id="@+id/action_doctorProfilePatientSide_to_chatPagePatientSide"
+            app:destination="@id/chatPagePatientSide" />
+        <argument
+            android:name="doctor"
+            app:argType="com.example.palliativecare.model.Doctor" />
+    </fragment>
+</navigation>

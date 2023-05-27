@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/registeration"
+    app:startDestination="@id/logIn">
+
+    <fragment
+        android:id="@+id/logIn"
+        android:name="com.example.palliativecare.ui.registration.signing.LogIn"
+        android:label="login"
+        tools:layout="@layout/login" >
+        <action
+            android:id="@+id/action_logIn_to_signUp"
+            app:destination="@id/signUp"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUp"
+        android:name="com.example.palliativecare.ui.registration.signing.SignUp"
+        android:label="sign_up"
+        tools:layout="@layout/sign_up" >
+        <action
+            android:id="@+id/action_signUp_to_logIn"
+            app:destination="@id/logIn" />
+    </fragment>
+</navigation>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/doctor_details"
+    app:startDestination="@id/detailsDoctor">
+
+    <fragment
+        android:id="@+id/detailsDoctor"
+        android:name="com.example.palliativecare.ui.doctorScreens.fragments.showScreens.detailsFragments.DetailsDoctor"
+        android:label="details_doctor"
+        tools:layout="@layout/details_doctor" >
+        <action
+            android:id="@+id/action_detailsDoctor_to_filesDoctor"
+            app:destination="@id/filesDoctor" />
+    </fragment>
+    <fragment
+        android:id="@+id/filesDoctor"
+        android:name="com.example.palliativecare.ui.doctorScreens.fragments.showScreens.detailsFragments.FilesDoctor"
+        android:label="files_doctor"
+        tools:layout="@layout/files_doctor" >
+        <action
+            android:id="@+id/action_filesDoctor_to_detailsDoctor"
+            app:destination="@id/detailsDoctor" />
+    </fragment>
+</navigation>

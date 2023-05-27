@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:name=".languages.App"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Main"
+        tools:targetApi="31" >
+        <activity
+            android:name=".ui.doctorScreens.fragments.doctorChatPages.DoctorChatContainer"
+            android:exported="false" />
+        <activity
+            android:name=".ui.patientScreens.fragments.doctorTopicsPage.DoctorTopics"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:parentActivityName=".ui.patientScreens.PatientContainer"
+            android:theme="@style/Theme.Main" />
+        <activity
+            android:name=".ui.doctorScreens.fragments.showScreens.DetailsScreenDoctor"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:parentActivityName=".ui.doctorScreens.DoctorContainer"
+            android:theme="@style/Theme.Main" />
+        <activity
+            android:name=".ui.patientScreens.searchScreens.SearchActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:parentActivityName=".ui.doctorScreens.DoctorContainer"
+            android:theme="@style/Theme.Main" />
+        <activity
+            android:name=".ui.patientScreens.fragments.patientChatPages.PatientChatContainer"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:parentActivityName=".ui.patientScreens.PatientContainer"
+            android:theme="@style/Theme.Main" />
+        <activity
+            android:name=".ui.doctorScreens.DoctorContainer"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:parentActivityName=".ui.doctorScreens.DoctorContainer"
+            android:theme="@style/Theme.Main" />
+        <activity
+            android:name=".ui.patientScreens.PatientContainer"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:parentActivityName=".ui.doctorScreens.DoctorContainer"
+            android:theme="@style/Theme.Main" />
+        <activity
+            android:name=".ui.registration.RegistrationContainer"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:parentActivityName=".ui.doctorScreens.DoctorContainer"
+            android:theme="@style/Theme.Main" >
+        </activity>
+        <activity
+            android:name=".ui.splash.SplashContainer"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:label="@string/title_activity_splash_container"
+            android:parentActivityName=".ui.doctorScreens.DoctorContainer"
+            android:theme="@style/Theme.Main.NoActionBar" />
+        <activity
+            android:name=".Splash"
+            android:configChanges="orientation|screenSize"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service android:name=".utils.MYFirebaseMessagingService"
+            android:exported="false"
+            android:permission="com.google.android.c2dm.permission.Send">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.android.c2dm.intent.Receiver"/>
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

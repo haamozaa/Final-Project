@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <item android:title="">
+        <menu>
+
+        </menu>
+    </item>
+<group android:id="@+id/group1" android:checkableBehavior="single">
+    <item android:id="@id/doctorHome" android:title="الرئيسية" android:checked="true"/>
+    <item android:id="@id/doctorChats" android:title="الدردشات"/>
+    <item android:id="@id/doctorSettings" android:title="الاعدادات" />
+</group>
+</menu>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/doctor_nav"
+    app:startDestination="@id/doctorHome">
+
+    <fragment
+        android:id="@+id/doctorChats"
+        android:name="com.example.palliativecare.ui.doctorScreens.fragments.DoctorChats"
+        android:label="doctor_chats"
+        tools:layout="@layout/doctor_chats" />
+    <fragment
+        android:id="@+id/doctorHome"
+        android:name="com.example.palliativecare.ui.doctorScreens.fragments.DoctorHome"
+        android:label="doctor_home"
+        tools:layout="@layout/doctor_home" >
+        <action
+            android:id="@+id/addTopicAction"
+            app:destination="@id/addTopic2" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorSettings"
+        android:name="com.example.palliativecare.ui.doctorScreens.fragments.DoctorSettings"
+        android:label="doctor_settings"
+        tools:layout="@layout/doctor_settings" />
+    <dialog
+        android:id="@+id/addTopic2"
+        android:name="com.example.palliativecare.ui.doctorScreens.fragments.homeFragments.AddTopic"
+        android:label="add_topic"
+        tools:layout="@layout/add_topic" >
+        <action
+            android:id="@+id/action_addTopic2_to_doctorHome"
+            app:destination="@id/doctorHome" />
+        <argument
+            android:name="myTopic"
+            app:argType="com.example.palliativecare.model.Topic"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </dialog>
+</navigation>

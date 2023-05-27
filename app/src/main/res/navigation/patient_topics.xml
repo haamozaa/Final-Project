@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/patient_topics"
+    app:startDestination="@id/patientTopics">
+
+    <fragment
+        android:id="@+id/patientTopics"
+        android:name="com.example.palliativecare.ui.patientScreens.fragments.doctorTopicsPage.doctorsTopicsFragments.PatientTopics"
+        android:label="patient_topics"
+        tools:layout="@layout/patient_topics" >
+        <action
+            android:id="@+id/action_patientTopics_to_patientTopicDetails"
+            app:destination="@id/patientTopicDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/patientTopicDetails"
+        android:name="com.example.palliativecare.ui.patientScreens.fragments.doctorTopicsPage.doctorsTopicsFragments.PatientTopicDetails"
+        android:label="patient_topic_details"
+        tools:layout="@layout/patient_topic_details" >
+        <action
+            android:id="@+id/action_patientTopicDetails_to_patientTopics"
+            app:destination="@id/patientTopics" />
+        <argument
+            android:name="myTopicP"
+            app:argType="com.example.palliativecare.model.Topic" />
+        <action
+            android:id="@+id/action_patientTopicDetails_to_filesPatient"
+            app:destination="@id/filesPatient" />
+    </fragment>
+    <fragment
+        android:id="@+id/filesPatient"
+        android:name="com.example.palliativecare.ui.patientScreens.fragments.doctorTopicsPage.doctorsTopicsFragments.FilesPatient"
+        android:label="files_patient"
+        tools:layout="@layout/files_patient" >
+        <action
+            android:id="@+id/action_filesPatient_to_patientTopicDetails"
+            app:destination="@id/patientTopicDetails" />
+        <argument
+            android:name="myTopicB"
+            app:argType="com.example.palliativecare.model.Topic" />
+    </fragment>
+</navigation>

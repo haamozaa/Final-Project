@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/splash"
+    app:startDestination="@id/s1">
+
+    <fragment
+        android:id="@+id/s1"
+        android:name="com.example.palliativecare.ui.splash.S1"
+        android:label="s1"
+        tools:layout="@layout/s1" >
+        <action
+            android:id="@+id/action_s1_to_s2"
+            app:destination="@id/s2"
+            app:enterAnim="@anim/from_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/s2"
+        android:name="com.example.palliativecare.ui.splash.S2"
+        android:label="s2"
+        tools:layout="@layout/s2" >
+        <action
+            android:id="@+id/action_s2_to_s3"
+            app:destination="@id/s3" />
+        <action
+            android:id="@+id/action_s2_to_s1"
+            app:destination="@id/s1" />
+    </fragment>
+    <fragment
+        android:id="@+id/s3"
+        android:name="com.example.palliativecare.ui.splash.S3"
+        android:label="s3"
+        tools:layout="@layout/s3" >
+        <action
+            android:id="@+id/action_s3_to_s2"
+            app:destination="@id/s2" />
+    </fragment>
+</navigation>
